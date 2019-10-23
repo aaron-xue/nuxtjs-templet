@@ -20,8 +20,9 @@
 </template>
 
 <script>
-import {get} from "~/plugins/axios";
+import { get } from "~/plugins/axios";
 import Vue from "vue";
+import basePage from "~/components/pc/basePage.vue";
 
 // If used in nuxt.js/ssr, you should keep it only in browser build environment
 if (process.browser) {
@@ -30,7 +31,7 @@ if (process.browser) {
 }
 
 export default {
-  layout: "pc",
+  extends: basePage,
   async asyncData({ params, app, $axios, store, query }) {
     // let { data } = await get("/shakespeare/notes/33102571/user_notes");
     // console.log(data);
@@ -44,9 +45,9 @@ export default {
   data() {
     return {
       banners: [
-        "cdnImgUrl/v2/b_sub0.png",
-        "cdnImgUrl/v2/b_sub1.png",
-        "cdnImgUrl/v2/b_sub2.png"
+        "pcCdnImgUrl/v2/b_sub0.png",
+        "pcCdnImgUrl/v2/b_sub1.png",
+        "pcCdnImgUrl/v2/b_sub2.png"
       ],
       swiperOption: {
         pagination: {

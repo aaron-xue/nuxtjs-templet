@@ -34,16 +34,19 @@ module.exports = {
       //     exclude: /(node_modules)/
       //   })
       // }
-      var cdnImgUrl = 'https://static.shenzhoubb.com/images'
+      var pcCdnImgUrl = 'https://static.shenzhoubb.com/images'
+      var mCdnImgUrl = 'https://static.shenzhoubb.com/images'
       if (ctx.isDev) {
-        cdnImgUrl = '/assets/images'
+        pcCdnImgUrl = '/assets/images/pc'
+        mCdnImgUrl = '/assets/images/m'
       }
       config.module.rules.push({
         test: /\.(js|vue|css|scss)$/,
         loader: 'webpack-replace-loader',
         options: {
           arr: [
-            { search: 'cdnImgUrl', replace: cdnImgUrl, attr: 'g' },
+            { search: 'pcCdnImgUrl', replace: pcCdnImgUrl, attr: 'g' },
+            { search: 'mCdnImgUrl', replace: mCdnImgUrl, attr: 'g' },
             { search: '.png', replace: '.png?v=' + new Date().getTime(), attr: 'g' },
             { search: '.jpg', replace: '.jpg?v=' + new Date().getTime(), attr: 'g' }
           ]
