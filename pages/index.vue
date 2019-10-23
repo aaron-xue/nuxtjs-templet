@@ -45,9 +45,9 @@ export default {
   data() {
     return {
       banners: [
-        "pcCdnImgUrl/v2/b_sub0.png",
-        "pcCdnImgUrl/v2/b_sub1.png",
-        "pcCdnImgUrl/v2/b_sub2.png"
+        "pcCdnImgUrl/b_sub0.png",
+        "pcCdnImgUrl/b_sub1.png",
+        "pcCdnImgUrl/b_sub2.png"
       ],
       swiperOption: {
         pagination: {

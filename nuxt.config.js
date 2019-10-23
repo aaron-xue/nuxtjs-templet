@@ -37,8 +37,8 @@ module.exports = {
       var pcCdnImgUrl = 'https://static.shenzhoubb.com/images'
       var mCdnImgUrl = 'https://static.shenzhoubb.com/images'
       if (ctx.isDev) {
-        pcCdnImgUrl = '/assets/images/pc'
-        mCdnImgUrl = '/assets/images/m'
+        pcCdnImgUrl = '/images/pc'
+        mCdnImgUrl = '/images/m'
       }
       config.module.rules.push({
         test: /\.(js|vue|css|scss)$/,
